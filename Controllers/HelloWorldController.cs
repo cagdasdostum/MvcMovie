@@ -6,9 +6,17 @@ public class HelloWorldController : Controller
 {
   //
   //  GET : /HelloWorld/
-  public string Index()
+
+/*
+    public string Index()
+    {
+      return "This is my default action...";
+    }
+*/
+
+  public IActionResult Index()
   {
-    return "This is my default action....";
+    return View();
   }
 
   //
@@ -17,4 +25,6 @@ public class HelloWorldController : Controller
   {
     return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is {ID}");
   }
+
+  
 }
